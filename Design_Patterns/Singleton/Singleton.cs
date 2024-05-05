@@ -12,11 +12,6 @@ public class Singleton
 
     public static Singleton GetInstance()
     {
-        if (_instance is null)
-        {
-            _instance = new Singleton();
-        }
-
-        return _instance;
+        return _instance ??= new Singleton();
     }
 }
